@@ -20,4 +20,4 @@ jobs:
           run: npm install -g caprover
 
         - name: Caprover Deploy
-          run: caprover deploy -h '${{ secrets.CAPROVER_SERVER}}' -p '${{ secrets.CAPROVER_PASSWORD }}' -b 'master' -a 'ecs-api-license'
+          run: caprover deploy -h '${{ secrets.CAPROVER_SERVER}}' -p '${{ secrets.CAPROVER_PASSWORD }}' -b 'master' -a 'ecs-bot'
