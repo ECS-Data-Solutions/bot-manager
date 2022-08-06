@@ -16,9 +16,6 @@ jobs:
           with:
             node-version: '14'
 
-        - name: Install git
-          run: sudo apk add git
-
         - name: Install caprover
           run: npm install -g caprover
 
