@@ -23,24 +23,6 @@ class BetaTesters(commands.Cog):
         checks=[commands.has_role(1005262215378636840)],
     )
 
-    @beta.command()
-    async def testers(self, ctx: discord.ApplicationContext):
-        # Get all the beta testers from discord role
-        beta_testers = [
-            member.id for member in ctx.guild.get_role(1005262215378636840).members
-        ]
-        # Format into embed
-        embed = discord.Embed(
-            title="Beta Testers",
-            color=0x00ff00,
-        )
-        desc = []
-        for beta_tester in beta_testers:
-            member = ctx.guild.get_member(beta_tester)
-            desc.append(f"{member.mention}")
-        embed.description = "\n".join(desc)
-        await ctx.respond(embed=embed)
-
     @beta_admin.command()
     async def add(self, ctx: discord.ApplicationContext, user: discord.Member):
         # Add user to beta testers role

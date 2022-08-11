@@ -19,6 +19,7 @@ class Client(commands.Bot):
         return self.cluster
 
 
-bot = Client(debug_guilds=[997239798429388941])
+intents = discord.Intents.all()
+bot = Client(debug_guilds=[997239798429388941], intents=intents)
 
 bot.run(os.getenv('DISC_TOKEN'))
