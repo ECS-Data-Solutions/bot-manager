@@ -20,6 +20,6 @@ class Client(commands.Bot):
 
 
 intents = discord.Intents.all()
-bot = Client(debug_guilds=[997239798429388941], intents=intents)
+bot = Client(debug_guilds=[1015004273752428555], intents=intents)
 
 bot.run(os.getenv('DISC_TOKEN'))
